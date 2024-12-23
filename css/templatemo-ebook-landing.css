@@ -1051,3 +1051,13 @@ strong {
   }
 }
 
+@media (max-width: 800px) {
+  .featured-section::after {
+    /* Was 0 0 450px 450px; now smaller to avoid text coverage */
+    border-width: 0 0 200px 200px;
+  }
+  .featured-section .col-12.text-center {
+    text-align: left !important;
+    padding-left: 20px; /* shift text away from diagonal */
+  }
+}
