@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Updated Page Title -->
+        <!-- Page Title -->
         <title>CrowdX – Blockchain Crowdfunding Platform</title>
 
         <!-- CSS FILES -->        
@@ -12,14 +12,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+        <!-- Bootstrap & Icons -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Your main CSS file (including :root variables, etc.) -->
         <link href="css/templatemo-ebook-landing.css" rel="stylesheet">
 
         <!--
         TemplateMo 588 ebook landing
         https://templatemo.com/tm-588-ebook-landing
         -->
+
+        <!-- QUICK FIX: Reduce diagonal & shift text left under 800px -->
+        <style>
+          /* For screens < 800px, reduce diagonal, shift text left */
+          @media (max-width: 800px) {
+            .featured-section::after {
+              /* Shorten the diagonal so it won’t cover the text */
+              border-width: 0 0 200px 200px;
+            }
+            /* Shift text fully left so it's not hidden */
+            .featured-section .col-12.text-center {
+              text-align: left !important;
+              padding-left: 20px; /* You can tweak if needed */
+            }
+          }
+        </style>
     </head>
     
     <body>
@@ -89,7 +108,13 @@
                             <!-- No CTA buttons here -->
                         </div>
 
-                        <!-- Right side hero image removed -->
+                        <!-- Right side hero image was removed/commented out previously -->
+                        <!--
+                        <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
+                            <img src="images/blockchain-crowdfunding.png" class="hero-image img-fluid" alt="CrowdX blockchain crowdfunding">
+                        </div>
+                        -->
+
                     </div>
                 </div>
             </section>
@@ -98,14 +123,12 @@
             <section class="featured-section">
                 <div class="container">
                     <div class="row">
+                        <!-- Moved text left under 800px to avoid diagonal overlay -->
                         <div class="col-12 text-center">
-                            
-                            <!-- The question is smaller (h6) + black text -->
                             <h6 style="color: #000;">
                                 Do you see value in blockchain-based CrowdFunding?
                             </h6>
-                            
-                            <!-- Buttons were removed previously -->
+                            <!-- No buttons here -->
                             <p class="mt-4" id="vote-results">
                                 <!-- Potential placeholder for future feature -->
                             </p>
@@ -153,7 +176,6 @@
                             <h2 class="mb-5">A Glimpse of Our Features</h2>
                         </div>
 
-                        <!-- Left side nav for Scrollspy -->
                         <div class="col-lg-4 col-12">
                             <nav id="navbar-example3" class="h-100 flex-column align-items-stretch">
                                 <nav class="nav nav-pills flex-column">
@@ -166,11 +188,9 @@
                             </nav>
                         </div>
 
-                        <!-- Right side content for each tab -->
                         <div class="col-lg-8 col-12">
                             <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
                                  class="scrollspy-example-2" tabindex="0">
-
                                 <!-- #item-1 INTRODUCTION -->
                                 <div class="scrollspy-example-item" id="item-1">
                                     <h5>Introduction</h5>
@@ -279,7 +299,6 @@
                                         </a>
                                     </p>
                                 </div>
-
                             </div><!-- scrollspy container -->
                         </div><!-- col-lg-8 -->
                     </div><!-- row -->
@@ -290,7 +309,6 @@
             <section class="author-section section-padding" id="section_3">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-6 col-12">
                             <img src="images/portrait-mature-smiling-authoress-sitting-desk.jpg"
                                  class="author-image img-fluid" alt="Platform Demonstration">
@@ -314,7 +332,6 @@
                                 and accountability on both sides.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -323,7 +340,6 @@
             <section class="reviews-section section-padding" id="section_4">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-12 col-12 text-center mb-5">
                             <h6>Survey</h6>
                             <h2>Please Share Your Insights</h2>
@@ -341,7 +357,6 @@
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -351,13 +366,13 @@
                 <div class="container">
                     <div class="row">
 
-                        <!-- SIGN-UP FORM (with FormSubmit) -->
+                        <!-- SIGN-UP FORM -->
                         <div class="col-lg-5 col-12 mx-auto">
-                            <form class="custom-form ebook-download-form bg-white shadow" 
-                                  action="https://formsubmit.co/CrowdXinfo@gmail.com" 
-                                  method="POST" 
+                            <!-- Using FormSubmit.co so it sends to your email -->
+                            <form class="custom-form ebook-download-form bg-white shadow"
+                                  action="https://formsubmit.co/CrowdXinfo@gmail.com"
+                                  method="POST"
                                   role="form">
-
                                 <div class="text-center mb-5">
                                     <h2 class="mb-1">Sign up for early access</h2>
                                 </div>
@@ -368,7 +383,6 @@
                                                pattern="[^ @]*@[^ @]*" class="form-control"
                                                placeholder="your@company.com" aria-label="early-access-email"
                                                aria-describedby="basic-addon2" required>
-
                                         <span class="input-group-text" id="basic-addon2">
                                             <i class="custom-form-icon bi-envelope"></i>
                                         </span>
@@ -385,14 +399,12 @@
                         <div class="col-lg-6 col-12">
                             <h6 class="mt-5">Get in touch</h6>
                             <h2 class="mb-4">Contact</h2>
-
                             <p>
                                 <a href="mailto:CrowdXinfo@gmail.com" class="contact-link">
                                     CrowdXinfo@gmail.com
                                 </a>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </section>
