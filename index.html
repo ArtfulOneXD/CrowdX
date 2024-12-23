@@ -24,18 +24,28 @@
         https://templatemo.com/tm-588-ebook-landing
         -->
 
-        <!-- QUICK FIX: Reduce diagonal & shift text left under 800px -->
+        <!-- 
+          QUICK FIX: 
+          1) Reduce diagonal for < 800px
+          2) Move text to the top of orange area, no top padding 
+        -->
         <style>
-          /* For screens < 800px, reduce diagonal, shift text left */
           @media (max-width: 800px) {
+            /* Shrink the diagonal cut so it won’t cover the text */
             .featured-section::after {
-              /* Shorten the diagonal so it won’t cover the text */
               border-width: 0 0 200px 200px;
             }
-            /* Shift text fully left so it's not hidden */
+
+            /* Remove top padding in .featured-section so text starts at the top */
+            .featured-section {
+              padding-top: 0 !important;
+            }
+
+            /* Shift text fully left and top */
             .featured-section .col-12.text-center {
               text-align: left !important;
-              padding-left: 20px; /* You can tweak if needed */
+              padding-left: 20px; /* Adjust if needed */
+              margin-top: 0 !important;
             }
           }
         </style>
@@ -108,8 +118,7 @@
                             <!-- No CTA buttons here -->
                         </div>
 
-                        <!-- Right side hero image was removed/commented out previously -->
-                        <!--
+                        <!-- Right side hero image (removed previously)
                         <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
                             <img src="images/blockchain-crowdfunding.png" class="hero-image img-fluid" alt="CrowdX blockchain crowdfunding">
                         </div>
@@ -123,7 +132,7 @@
             <section class="featured-section">
                 <div class="container">
                     <div class="row">
-                        <!-- Moved text left under 800px to avoid diagonal overlay -->
+                        <!-- We shift the text left for < 800px in the style above -->
                         <div class="col-12 text-center">
                             <h6 style="color: #000;">
                                 Do you see value in blockchain-based CrowdFunding?
@@ -302,7 +311,7 @@
                             </div><!-- scrollspy container -->
                         </div><!-- col-lg-8 -->
                     </div><!-- row -->
-                </div><!-- container -->
+                </div>
             </section>
 
             <!-- HOW IT WORKS SECTION (id="section_3") -->
@@ -365,10 +374,8 @@
             <section class="contact-section section-padding" id="section_5">
                 <div class="container">
                     <div class="row">
-
                         <!-- SIGN-UP FORM -->
                         <div class="col-lg-5 col-12 mx-auto">
-                            <!-- Using FormSubmit.co so it sends to your email -->
                             <form class="custom-form ebook-download-form bg-white shadow"
                                   action="https://formsubmit.co/CrowdXinfo@gmail.com"
                                   method="POST"
