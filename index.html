@@ -28,20 +28,28 @@
           QUICK FIX: 
           1) Make diagonal cut smaller under 800px (120px)
           2) Move text to top-left in .featured-section for < 800px
+          3) Reduce blank space between text & dotted line in .scrollspy-example-item
         -->
         <style>
+          /* Under 800px: smaller diagonal, shift text left */
           @media (max-width: 800px) {
             .featured-section::after {
-              border-width: 0 0 120px 120px;
+              border-width: 0 0 120px 120px; /* make diagonal smaller */
             }
             .featured-section {
               padding-top: 0 !important;
             }
             .featured-section .col-12.text-center {
               text-align: left !important;
-              padding-left: 20px; 
+              padding-left: 20px;
               margin-top: 0 !important;
             }
+          }
+
+          /* Reduce blank space for .scrollspy-example-item everywhere */
+          .scrollspy-example-item {
+            min-height: 0 !important;       /* remove large default min-height */
+            padding-bottom: 20px !important;/* was 50px; make smaller */
           }
         </style>
     </head>
@@ -108,13 +116,11 @@
 
                         <!-- Left side text -->
                         <div class="col-lg-6 col-12 mb-5 pb-5 pb-lg-0 mb-lg-0">
-                            <!-- REVISED HEADLINE TEXT -->
                             <h6>Bring Your Ideas to Life</h6>
                             <h1 class="text-white mb-4">with Community Support and Blockchain Transparency</h1>
                         </div>
 
-                        <!-- Right side hero image removed -->
-                        <!--
+                        <!-- Right side hero image removed 
                         <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
                             <img src="images/blockchain-crowdfunding.png" class="hero-image img-fluid" alt="CrowdX blockchain crowdfunding">
                         </div>
@@ -197,14 +203,11 @@
                                 <!-- #item-1 INTRODUCTION -->
                                 <div class="scrollspy-example-item" id="item-1">
                                     <h5>Introduction</h5>
-                                    <!-- REVISED ABOUT CROWDFUNDING / INTRO TEXT -->
                                     <p>
-                                        <!-- About Crowdfunding Revision -->
                                         Crowdfunding is a way to raise money by asking many people to each contribute a small amount. 
                                         It’s like teamwork—everyone pitches in to help bring big ideas to life!
                                     </p>
                                     <p>
-                                        <!-- Introduction Revision -->
                                         At CrowdX, we make crowdfunding better by lowering fees, increasing transparency, and 
                                         focusing on helping local businesses and projects succeed.
                                     </p>
@@ -213,7 +216,6 @@
                                 <!-- #item-2 BLOCKCHAIN TRANSPARENCY -->
                                 <div class="scrollspy-example-item" id="item-2">
                                     <h5>Blockchain Transparency</h5>
-                                    <!-- REVISED BLOCKCHAIN SECTION TEXT -->
                                     <p>
                                         CrowdX uses blockchain technology to record every transaction. This means:
                                     </p>
@@ -227,7 +229,6 @@
                                 <!-- #item-3 LOW FEES & GLOBAL REACH -->
                                 <div class="scrollspy-example-item" id="item-3">
                                     <h5>Low Fees &amp; Global Reach</h5>
-                                    <!-- REVISED LOW FEES TEXT -->
                                     <p>
                                         Traditional crowdfunding platforms charge up to 10% in fees. CrowdX lowers this to just 3–5%, 
                                         so creators keep more of the money they raise. 
@@ -238,7 +239,6 @@
                                 <!-- #item-4 SECURITY & TRUST -->
                                 <div class="scrollspy-example-item" id="item-4">
                                     <h5>Security &amp; Trust</h5>
-                                    <!-- REVISED SECURITY TEXT -->
                                     <p>
                                         Blockchain technology makes CrowdX safe and secure:
                                     </p>
@@ -254,7 +254,6 @@
                                 <!-- #item-5 LOCAL EMPOWERMENT -->
                                 <div class="scrollspy-example-item" id="item-5">
                                     <h5>Local Empowerment</h5>
-                                    <!-- REVISED LOCAL EMPOWERMENT TEXT -->
                                     <p>
                                         CrowdX helps local communities thrive by supporting Sacramento businesses and 
                                         connecting creators with backers to build lasting success stories.
