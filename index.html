@@ -26,26 +26,20 @@
 
         <!-- 
           QUICK FIX: 
-          1) Make diagonal cut smaller under 800px (now 120px)
+          1) Make diagonal cut smaller under 800px (120px)
           2) Move text to top-left in .featured-section for < 800px
         -->
         <style>
           @media (max-width: 800px) {
-            /* Make the diagonal smaller so it won't cover text */
             .featured-section::after {
-              /* Was 450px for desktop, 200px previously, now 120px for smaller cut */
               border-width: 0 0 120px 120px;
             }
-
-            /* Remove top padding in .featured-section so text starts at the top */
             .featured-section {
               padding-top: 0 !important;
             }
-
-            /* Shift text fully left and top */
             .featured-section .col-12.text-center {
               text-align: left !important;
-              padding-left: 20px; /* Adjust if needed */
+              padding-left: 20px; 
               margin-top: 0 !important;
             }
           }
@@ -114,12 +108,13 @@
 
                         <!-- Left side text -->
                         <div class="col-lg-6 col-12 mb-5 pb-5 pb-lg-0 mb-lg-0">
-                            <h6>Empower Local Dreams</h6>
-                            <h1 class="text-white mb-4">Blockchain Crowdfunding Made Simple</h1>
-                            <!-- No CTA buttons here -->
+                            <!-- REVISED HEADLINE TEXT -->
+                            <h6>Bring Your Ideas to Life</h6>
+                            <h1 class="text-white mb-4">with Community Support and Blockchain Transparency</h1>
                         </div>
 
-                        <!-- Right side hero image was removed 
+                        <!-- Right side hero image removed -->
+                        <!--
                         <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
                             <img src="images/blockchain-crowdfunding.png" class="hero-image img-fluid" alt="CrowdX blockchain crowdfunding">
                         </div>
@@ -133,12 +128,10 @@
             <section class="featured-section">
                 <div class="container">
                     <div class="row">
-                        <!-- We shift the text left for < 800px in the style above -->
                         <div class="col-12 text-center">
                             <h6 style="color: #000;">
                                 Do you see value in blockchain-based CrowdFunding?
                             </h6>
-                            <!-- No buttons here -->
                             <p class="mt-4" id="vote-results">
                                 <!-- Potential placeholder for future feature -->
                             </p>
@@ -177,7 +170,7 @@
                 </div>
             </section>
 
-            <!-- SCROLLSPY SECTION (with your 5 tabs) -->
+            <!-- SCROLLSPY SECTION -->
             <section>
                 <div class="container">
                     <div class="row">
@@ -204,109 +197,67 @@
                                 <!-- #item-1 INTRODUCTION -->
                                 <div class="scrollspy-example-item" id="item-1">
                                     <h5>Introduction</h5>
+                                    <!-- REVISED ABOUT CROWDFUNDING / INTRO TEXT -->
                                     <p>
-                                        Welcome to CrowdX, the next-generation crowdfunding platform powered by blockchain.<br>
-                                        Crowdfunding allows individuals, businesses, and organizations to raise money by pooling
-                                        small contributions from a large number of people.<br>
-                                        At CrowdX, we solve the biggest challenges in crowdfunding—high fees, lack of transparency,
-                                        and limited support for local projects.<br>
-                                        Join us in reshaping the future of funding—where trust, affordability, and community matter most.
+                                        <!-- About Crowdfunding Revision -->
+                                        Crowdfunding is a way to raise money by asking many people to each contribute a small amount. 
+                                        It’s like teamwork—everyone pitches in to help bring big ideas to life!
                                     </p>
                                     <p>
-                                        <strong>Scroll down to learn more or</strong>
-                                        <a href="#section_4" class="link link--kale smoothscroll">
-                                            Take our 2-minute survey to help us improve!
-                                        </a>
+                                        <!-- Introduction Revision -->
+                                        At CrowdX, we make crowdfunding better by lowering fees, increasing transparency, and 
+                                        focusing on helping local businesses and projects succeed.
                                     </p>
                                 </div>
 
                                 <!-- #item-2 BLOCKCHAIN TRANSPARENCY -->
                                 <div class="scrollspy-example-item" id="item-2">
                                     <h5>Blockchain Transparency</h5>
+                                    <!-- REVISED BLOCKCHAIN SECTION TEXT -->
                                     <p>
-                                        <strong>Trust Matters. Transparency is Key.</strong><br>
-                                        At CrowdX, every transaction is recorded on the blockchain. This means:
+                                        CrowdX uses blockchain technology to record every transaction. This means:
                                     </p>
                                     <ul>
-                                        <li>Backers can see where their money is going, ensuring campaigns stay accountable.</li>
-                                        <li>Creators can build trust with their supporters, increasing funding success rates.</li>
-                                        <li>Say goodbye to hidden fees and unclear spending. With blockchain, you’re always in the loop.</li>
+                                        <li>Backers always know how their money is used.</li>
+                                        <li>Creators can build trust with supporters.</li>
+                                        <li>No hidden fees or unclear spending—everything is transparent.</li>
                                     </ul>
-                                    <p>
-                                        What do you think about transparency in crowdfunding?
-                                        <a href="#section_4" class="btn custom-btn btn-sm ms-2 smoothscroll">
-                                            Take the Survey
-                                        </a>
-                                    </p>
                                 </div>
 
                                 <!-- #item-3 LOW FEES & GLOBAL REACH -->
                                 <div class="scrollspy-example-item" id="item-3">
                                     <h5>Low Fees &amp; Global Reach</h5>
+                                    <!-- REVISED LOW FEES TEXT -->
                                     <p>
-                                        <strong>Lower Fees. Bigger Impact.</strong><br>
-                                        Traditional crowdfunding platforms take up to 10% of your hard-earned funds.
-                                        At CrowdX, we’re changing that:
-                                    </p>
-                                    <ul>
-                                        <li>Creators Keep More: Our fees are just 3–5%.</li>
-                                        <li>Global Support: With crypto payments, you can reach backers worldwide instantly and affordably.</li>
-                                    </ul>
-                                    <p>
-                                        More funds for your project. More support for your vision.
-                                        That’s the power of CrowdX.
-                                    </p>
-                                    <p>
-                                        Would lower fees help your campaign?
-                                        <a href="#section_4" class="btn custom-btn btn-sm ms-2 smoothscroll">
-                                            Take the Survey
-                                        </a>
+                                        Traditional crowdfunding platforms charge up to 10% in fees. CrowdX lowers this to just 3–5%, 
+                                        so creators keep more of the money they raise. 
+                                        Plus, crypto payments let you reach supporters around the world instantly.
                                     </p>
                                 </div>
 
                                 <!-- #item-4 SECURITY & TRUST -->
                                 <div class="scrollspy-example-item" id="item-4">
                                     <h5>Security &amp; Trust</h5>
+                                    <!-- REVISED SECURITY TEXT -->
                                     <p>
-                                        <strong>Secure. Reliable. Trusted.</strong><br>
-                                        With blockchain technology, CrowdX ensures your funds are protected:
+                                        Blockchain technology makes CrowdX safe and secure:
                                     </p>
                                     <ul>
-                                        <li>Immutable Records: No tampering or fraud—ever.</li>
-                                        <li>Milestone-Based Funding: Backers’ funds are released only when goals are met.</li>
+                                        <li>All transactions are tamper-proof and fraud-free.</li>
+                                        <li>Funds are released only when goals are met.</li>
                                     </ul>
                                     <p>
-                                        Back projects with peace of mind. Launch campaigns with confidence.
-                                    </p>
-                                    <p>
-                                        What security features do you value most?
-                                        <a href="#section_4" class="btn custom-btn btn-sm ms-2 smoothscroll">
-                                            Take the Survey
-                                        </a>
+                                        Support projects with confidence, knowing your money is protected.
                                     </p>
                                 </div>
 
                                 <!-- #item-5 LOCAL EMPOWERMENT -->
                                 <div class="scrollspy-example-item" id="item-5">
                                     <h5>Local Empowerment</h5>
+                                    <!-- REVISED LOCAL EMPOWERMENT TEXT -->
                                     <p>
-                                        <strong>Empowering Sacramento’s Startups and Small Businesses</strong><br>
-                                        CrowdX isn’t just about funding—it’s about building stronger communities.
-                                        We focus on:
-                                    </p>
-                                    <ul>
-                                        <li>Local Success Stories: Helping Sacramento businesses thrive.</li>
-                                        <li>Community-Driven Growth: Connecting backers with local creators
-                                            to create lasting impact.</li>
-                                    </ul>
-                                    <p>
-                                        Let’s build a future where local startups get the support they deserve.
-                                    </p>
-                                    <p>
-                                        Does your business need funding?
-                                        <a href="#section_4" class="btn custom-btn btn-sm ms-2 smoothscroll">
-                                            Take the Survey
-                                        </a>
+                                        CrowdX helps local communities thrive by supporting Sacramento businesses and 
+                                        connecting creators with backers to build lasting success stories.
                                     </p>
                                 </div>
                             </div><!-- scrollspy container -->
